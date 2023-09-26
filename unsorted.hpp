@@ -16,12 +16,13 @@ public :
     void ResetList();
     int GetNextItem();
     void PrintList(ofstream& outfile);
-
+    
+    int GetCurrPos();
+    
 private :
     // 3 private data members
     int length; 
     long int info; //our list of items, each item is an int itself
     const int MAX_ITEMS = INT_MAX; //the max number of space available in the long int.
-                         //long int max size (use sizeof to find out)
-    //int currentPos;
+    int currentPos = -1;
 };
